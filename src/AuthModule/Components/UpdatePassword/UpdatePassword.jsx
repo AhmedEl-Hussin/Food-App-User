@@ -50,7 +50,7 @@ export default function UpdatePassword({handleClose}) {
               </div>
 
               <form className='form m-auto mt-' onSubmit={handleSubmit(onSubmit)}>
-                <h2>Change your password</h2>
+                <h2 className='text-success'>Change your password</h2>
                 <p>Enter your details below</p>
 
 

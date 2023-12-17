@@ -12,7 +12,7 @@ export default function Header({ Title , Paragraph }) {
         </div>
 
         <div className='img-header'>
-          <img src={header} alt="" />
+          <img className='headerImg' src={header} alt="" />
         </div>
 
       </div>

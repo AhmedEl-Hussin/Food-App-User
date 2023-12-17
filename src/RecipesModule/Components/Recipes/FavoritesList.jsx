@@ -27,26 +27,6 @@ export default function FavoritesList() {
         setModelState("delete-model")
     }
 
-    // ******************** to display all favorite list ************************
-    const getAllFaviourtList = ()=> {
-        setIsLoding(true)
-
-        axios.get(`${baseUrl}/userRecipe/` , 
-        {
-            headers: requstHeaders,
-        })
-        .then((response)=>{
-            // console.log(response.data);
-            setFaviourtList(response?.data?.data)
-            setIsLoding(false)
-        
-        }).catch((error)=>{
-            // console.log(error);
-            error(error?.response?.data?.data)
-            setIsLoding(false)
-        })
-    }
-
     // ******************** to delete favorite recipe ************************
     const deleteFaviourt = ()=> {
         // alert(itemId)
@@ -67,6 +47,27 @@ export default function FavoritesList() {
             setIsLoding(false);
         })
         }
+
+
+    // ******************** to display all favorite list ************************
+    const getAllFaviourtList = ()=> {
+        setIsLoding(true)
+
+        axios.get(`${baseUrl}/userRecipe/` , 
+        {
+            headers: requstHeaders,
+        })
+        .then((response)=>{
+            // console.log(response.data);
+            setFaviourtList(response?.data?.data)
+            setIsLoding(false)
+        
+        }).catch((error)=>{
+            // console.log(error);
+            error(error?.response?.data?.data)
+            setIsLoding(false)
+        })
+    }
     
     useEffect( ()=> {
         getAllFaviourtList()

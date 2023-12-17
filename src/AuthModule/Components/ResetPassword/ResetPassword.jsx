@@ -47,7 +47,7 @@ export default function ResetPassword() {
               </div>
 
               <form className='form w-75 m-auto mt-4' onSubmit={handleSubmit(onSubmit)}>
-                <h2>Request Reset  Password</h2>
+                <h2 className="text-success">Request Reset  Password</h2>
                 <p>Please Enter Your Email And Check Your Inbox</p>
 
 

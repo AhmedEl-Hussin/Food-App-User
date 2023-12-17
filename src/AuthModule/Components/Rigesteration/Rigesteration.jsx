@@ -57,7 +57,7 @@ export default function Rigesteration() {
               </div>
 
               <form className='form px-5 m-auto mt-4' onSubmit={handleSubmit(onSubmit)}>
-                <h2>Register</h2>
+                <h2 className='text-success'>Register</h2>
                 <p>Welcome Back! Please enter your details</p>
 
                 <div className='row'>

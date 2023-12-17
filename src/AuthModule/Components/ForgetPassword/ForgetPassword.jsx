@@ -48,7 +48,7 @@ export default function ForgetPassword() {
               </div>
 
               <form className='form w-75 m-auto mt-4' onSubmit={handleSubmit(onSubmit)}>
-                <h2> Reset  Password</h2>
+                <h2 className='text-success'> Reset  Password</h2>
                 <p>Please Enter Your Otp  or Check Your Inbox</p>
 
                 <div className='form-group position-relative mt-4'>

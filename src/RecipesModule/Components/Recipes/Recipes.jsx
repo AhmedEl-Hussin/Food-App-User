@@ -171,7 +171,7 @@ export default function Recipes() {
       {/* ************* this model to update recipe *********** */}
       <Modal show={modelState == "view-model"} onHide={handleClose}>
         <Modal.Body>
-          <h4 className="">Recipe Details</h4> 
+          <h4 className="text-success fw-bold">Recipe Details</h4> 
           <div className='w-50 m-auto mt-4'>
             {recipeDetails?.imagePath ?            
               <img className='w-100 rounded-4' src={`https://upskilling-egypt.com:443/`+recipeDetails?.imagePath} alt="" />
@@ -180,7 +180,7 @@ export default function Recipes() {
 
           <div className='mt-4'>
             <h6> <span className='text-success'>Description : </span> {recipeDetails?.description} </h6>
-            <h6> <span className='text-success'>Category : </span> {recipeDetails?.category?.name} </h6>
+            {/* <h6> <span className='text-success'>Category : </span> {recipeDetails?.category?.name} </h6> */}
             <h6> <span className='text-success'>Tag : </span> {recipeDetails?.tag?.name} </h6>
           </div>
 
@@ -206,9 +206,11 @@ export default function Recipes() {
       {/* **************** to view search inputs ****************** */}
       <div className='d-flex'>
 
-        <input onChange={getRecipeValue} className='form-control w-50' placeholder='Search By Name.....' type="text" />
+        {/* **************** to search by name ****************** */}
+        <input onChange={getRecipeValue} className='form-control border-2 border-success w-50' placeholder='Search By Name.....' type="text" />
         
-        <select onChange={getTagValue} className='form-select w-25 ms-2'>
+        {/* **************** to search by tag id ****************** */}
+        <select onChange={getTagValue} className='form-select border-2 border-success w-25 ms-2'>
           <option value="" className='text-muted'>Select tag</option>
             {tagIds.map((getId , index)=> (
               <option key={index} value={getId.id}>
@@ -217,7 +219,8 @@ export default function Recipes() {
             ))} 
         </select>
 
-        <select onChange={getcategoryValue} className='form-select w-25 ms-2'>
+        {/* **************** to search by category id ****************** */}
+        <select onChange={getcategoryValue} className='form-select border-2 border-success w-25 ms-2'>
           <option value="" className='text-muted'>Select category</option>
             {categoryIds.map((getId , index)=> (
               <option key={index} value={getId.id}>

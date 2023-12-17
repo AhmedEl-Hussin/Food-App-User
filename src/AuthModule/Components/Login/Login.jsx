@@ -52,7 +52,7 @@ export default function Login({saveUserData}) {
               </div>
 
               <form className='form w-75 m-auto mt-4' onSubmit={handleSubmit(onSubmit)}>
-                <h2>Log in</h2>
+                <h2 className="text-success">Log in</h2>
                 <p>Welcome Back! Please enter your details</p>
 
   {/* ************************* for input email ***************************** */}

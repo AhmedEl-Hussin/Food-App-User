@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar/Navbar.jsx";
 import SideBar from "../SideBar/SideBar.jsx";
-import Header from "../Header/Header.jsx";
+// import Header from "../Header/Header.jsx";
 
 export default function MasterLayout({userData}) {
     
